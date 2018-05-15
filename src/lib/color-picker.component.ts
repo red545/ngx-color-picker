@@ -62,6 +62,7 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public cpWidth: number;
   public cpHeight: number;
+  public cpFieldHeight: number;
 
   public cpAlphaChannel: string;
   public cpOutputFormat: string;
@@ -107,7 +108,7 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
     const hueWidth = this.hueSlider.nativeElement.offsetWidth;
     const alphaWidth = this.alphaSlider.nativeElement.offsetWidth;
 
-    this.sliderDimMax = new SliderDimension(hueWidth, this.cpWidth, 130, alphaWidth);
+    this.sliderDimMax = new SliderDimension(hueWidth, this.cpWidth, 100, alphaWidth);
 
     if (this.cpOutputFormat === 'rgba') {
       this.format = 1;
@@ -132,7 +133,7 @@ export class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
       const hueWidth = this.hueSlider.nativeElement.offsetWidth;
       const alphaWidth = this.alphaSlider.nativeElement.offsetWidth;
 
-      this.sliderDimMax = new SliderDimension(hueWidth, this.cpWidth, 130, alphaWidth);
+      this.sliderDimMax = new SliderDimension(hueWidth, this.cpWidth, 100, alphaWidth);
 
       this.updateColorPicker(false);
 

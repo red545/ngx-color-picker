@@ -24,6 +24,8 @@ export class ColorPickerDirective implements OnChanges, OnDestroy {
   @Input() cpWidth: string = '230px';
   @Input() cpHeight: string = 'auto';
 
+  @Input() cpFieldHeight: number = 100;
+
   @Input() cpToggle: boolean = false;
 
   @Input() cpIgnoredElements: any = [];
